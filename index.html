@@ -1,0 +1,229 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ISSUE NO.1 — DO AH RA & JO DONG IN</title>
+<meta property="og:title" content="Magazine D — ISSUE NO.1">
+<meta property="og:description" content="두 사람에 관한 다큐멘터리. 창간호.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ====== Magazine B 구조를 따르는 최소 스타일 ====== */
+  :root{
+    --ink:#111; --sub:#777; --line:#e6e6e6; --bg:#fff; --ph:#ececec;
+    --serif:"Inter","Noto Sans KR",-apple-system,system-ui,sans-serif;
+    --maxw:1100px;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--serif);font-weight:300;-webkit-font-smoothing:antialiased}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 20px}
+
+  /* 1. 상단 바 */
+  nav.top{display:flex;justify-content:space-between;align-items:center;height:52px;font-size:12px;letter-spacing:.02em;border-bottom:1px solid var(--line)}
+  nav.top .l a, nav.top .r a{margin-right:16px}
+  nav.top .r a:last-child{margin-right:0}
+  nav.top .logo{font-weight:500;letter-spacing:.08em}
+
+  /* 2. 헤더 3단 위계 */
+  header.issue{padding:36px 0 8px}
+  header.issue .k{font-size:12px;color:var(--ink);margin:0 0 2px;font-weight:400}
+  header.issue h1{font-size:34px;line-height:1.1;font-weight:400;margin:14px 0 0;letter-spacing:-.01em}
+  header.issue .sub{font-size:13px;color:var(--sub);margin-top:8px}
+
+  /* 3. 스펙 표 */
+  table.spec{width:100%;border-collapse:collapse;margin:26px 0 0;font-size:12px}
+  table.spec td{padding:9px 0;border-top:1px solid var(--line);vertical-align:top}
+  table.spec tr:last-child td{border-bottom:1px solid var(--line)}
+  table.spec td:first-child{width:38%;color:var(--sub);text-transform:lowercase}
+  .rel .thumb img{width:100%;height:100%;object-fit:cover;display:block}
+
+  /* 4. Description */
+  section.desc{padding:34px 0 10px}
+  section.desc .k{font-size:12px;margin:0 0 12px;font-weight:400}
+  section.desc p{font-size:14px;line-height:1.9;margin:0;word-break:keep-all}
+
+  /* 5~10. 히어로 / 스프레드 / 인용구 */
+  .spreads{padding:24px 0 0}
+  .spread{position:relative;width:100%;aspect-ratio:17/12;background:var(--ph);margin:0 0 6px;overflow:hidden}
+  .spread img{width:100%;height:100%;object-fit:cover;display:block}
+  .spread .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;flex-direction:column;color:#9a9a9a;font-size:12px;letter-spacing:.04em;text-align:center;padding:16px}
+  .spread .ph b{font-weight:500;color:#777;margin-bottom:4px}
+  .spread.hero{margin-bottom:28px}
+  /* 펼침면 느낌: 좌우 2장 */
+  .spread.duo{display:grid;grid-template-columns:1fr 1fr;gap:4px;background:none;aspect-ratio:auto}
+  .spread.duo > div{background:var(--ph);position:relative;aspect-ratio:17/24;overflow:hidden}
+  .spread.duo > div img{width:100%;height:100%;object-fit:cover;display:block}
+  .spread.duo .ph{font-size:11px}
+
+  .quote{padding:40px 12px 46px;text-align:center}
+  .quote p{font-size:14.5px;line-height:1.95;margin:0 auto;max-width:640px;word-break:keep-all}
+  .quote .by{display:block;margin-top:22px;font-size:12px;color:var(--sub)}
+
+  /* 11. Related */
+  section.related{padding:44px 0 30px;border-top:1px solid var(--line);margin-top:40px}
+  section.related .k{font-size:12px;margin:0 0 18px;font-weight:400}
+  .rel{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+  .rel a{display:block}
+  .rel .thumb{aspect-ratio:3/4;background:var(--ph);position:relative}
+  .rel .thumb .ph{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:#9a9a9a;font-size:11px;text-align:center;padding:8px}
+  .rel .t{font-size:12px;margin-top:8px;font-weight:400}
+  .rel .s{font-size:11px;color:var(--sub);margin-top:2px}
+
+  /* 12. 푸터 */
+  footer{border-top:1px solid var(--line);padding:28px 0 60px;font-size:11px;color:var(--sub);line-height:1.9}
+  footer .logo{color:var(--ink);font-weight:500;letter-spacing:.08em;margin-bottom:10px}
+
+  @media (min-width:760px){
+    header.issue h1{font-size:48px}
+    section.desc p{font-size:15px}
+    .spread{margin-bottom:10px}
+  }
+</style>
+</head>
+<body>
+
+<!-- 1. 상단 바 (B: New / Magazine / Books / Newsletter / Index / KR EN) -->
+<div class="wrap">
+  <nav class="top">
+    <div class="l"><a class="logo" href="#">D</a><a href="#">Issues</a><a href="survey.html">Survey</a><a href="print.html">Print</a></div>
+    <div class="r"><a href="#">KR</a><a href="#">EN</a></div>
+  </nav>
+</div>
+
+<main class="wrap">
+
+  <!-- 2. 헤더: Magazine B / ISSUE NO.97 / DISNEY -->
+  <header class="issue">
+    <p class="k">Magazine D</p>
+    <p class="k">ISSUE NO.1</p>
+    <h1>DO AH RA &amp;<br>JO DONG IN</h1>
+    <p class="sub">도아라 &amp; 조동인</p>
+
+    <!-- 3. 스펙 표: language / size / pages / date / isbn -->
+    <table class="spec">
+      <tr><td>language</td><td>KOREAN</td></tr>
+      <tr><td>format</td><td>mobile web · print 170 × 240 mm</td></tr>
+      <tr><td>pages</td><td>16 spreads · 44 pages</td></tr>
+      <tr><td>date</td><td>2026. 10. 00.</td></tr>
+      <tr><td>circulation</td><td>00 readers</td></tr>
+    </table>
+  </header>
+
+  <!-- 4. Description: 1문단 요약 -->
+  <section class="desc">
+    <p class="k">Description</p>
+    <p>
+      도아라와 조동인은 1991년과 1989년, 각각 ○○과 대구에서 태어났습니다. 한 사람은 식품영양학에서 출발해 미생물과 데이터를 다루는 연구자가 되었고,
+      다른 한 사람은 대구에서 창업가들을 돕는 액셀러레이터를 이끌어왔습니다. 두 사람은 ○○년 ○○에서 처음 만났고, ○년의 시간을 지나
+      2026년 ○월 혼인신고를 마쳤습니다. 2026년 10월, 여덟 명의 가족 앞에서 결혼식을 올린 두 사람은 같은 해 12월 보스턴으로 떠납니다.
+      이 창간호는 그 출발점에 서 있는 두 사람을, 두 사람을 오래 지켜본 이들의 말과 사진으로 기록합니다.
+    </p>
+  </section>
+
+  <!-- 5. 히어로: B는 책 실물 세팅 컷 1장 -->
+  <div class="spreads">
+    <div class="spread hero"><img src="photos/hero.jpg" alt=""></div>
+
+    <!-- 6. 스프레드 01~03: Origin — 아라 -->
+    <div class="spread"><img src="photos/01.jpg" alt="" loading="lazy"></div>
+    <div class="spread duo">
+      <div><img src="photos/02L.jpg" alt="" loading="lazy"></div>
+      <div><img src="photos/02R.jpg" alt="" loading="lazy"></div>
+    </div>
+    <div class="spread"><img src="photos/03.jpg" alt="" loading="lazy"></div>
+
+    <!-- 7. 인용구 1: 신부 부모님 -->
+    <blockquote class="quote">
+      <p>
+        어릴 때부터 뭐든 끝까지 파고드는 아이였어요. 한번 궁금한 게 생기면 밥 먹는 것도 잊고 앉아 있었죠.
+        그게 지금 하는 일로 이어질 줄은 몰랐지만, 돌아보면 그때 이미 다 정해져 있었던 것 같아요.
+      </p>
+      <span class="by">김정화, 신부의 어머니</span>
+    </blockquote>
+
+    <!-- 8. 스프레드 04~06: Origin — 동인 -->
+    <div class="spread"><img src="photos/04.jpg" alt="" loading="lazy"></div>
+    <div class="spread duo">
+      <div><img src="photos/05L.jpg" alt="" loading="lazy"></div>
+      <div><img src="photos/05R.jpg" alt="" loading="lazy"></div>
+    </div>
+    <div class="spread"><img src="photos/06.jpg" alt="" loading="lazy"></div>
+
+    <!-- 9. 인용구 2: 신랑 부모님 -->
+    <blockquote class="quote">
+      <p>
+        (신랑 부모님 말씀이 들어갈 자리입니다. 사진 3장을 보시면서 떠오르는 이야기를 그대로 받아 적습니다.
+        말투를 고치지 않는 것이 이 잡지의 원칙입니다.)
+      </p>
+      <span class="by">○○○, 신랑의 아버지</span>
+    </blockquote>
+
+    <!-- 스프레드 07~09: Encounter — 두 사람 -->
+    <div class="spread"><img src="photos/07.jpg" alt="" loading="lazy"></div>
+    <div class="spread duo">
+      <div><img src="photos/08L.jpg" alt="" loading="lazy"></div>
+      <div><img src="photos/08R.jpg" alt="" loading="lazy"></div>
+    </div>
+    <div class="spread"><img src="photos/09.jpg" alt="" loading="lazy"></div>
+
+    <!-- 인용구 3: 친구 -->
+    <blockquote class="quote">
+      <p>
+        (두 사람을 함께 아는 친구 한 명의 말. 두 사람이 서로에게 어떤 사람인지, 옆에서 본 사람만 아는 이야기.)
+      </p>
+      <span class="by">○○○, 두 사람의 친구</span>
+    </blockquote>
+
+    <!-- 스프레드 10~12: Studio -->
+    <div class="spread"><img src="photos/10.jpg" alt="" loading="lazy"></div>
+    <div class="spread duo">
+      <div><img src="photos/11L.jpg" alt="" loading="lazy"></div>
+      <div><img src="photos/11R.jpg" alt="" loading="lazy"></div>
+    </div>
+    <div class="spread"><img src="photos/12.jpg" alt="" loading="lazy"></div>
+
+    <!-- 인용구 4: 두 사람 (Outro 역할) -->
+    <blockquote class="quote">
+      <p>
+        (두 사람의 말. B의 아웃트로처럼 나레이션 톤으로. 왜 여덟 명의 가족식이었는지, 왜 이 잡지를 만드는지.
+        2호에서 다시 읽었을 때 초심이 되어줄 문장.)
+      </p>
+      <span class="by">도아라 · 조동인, 발행인</span>
+    </blockquote>
+
+    <!-- 스프레드 13~15: The Day — 가족식 -->
+    <div class="spread"><img src="photos/13.jpg" alt="" loading="lazy"></div>
+    <div class="spread duo">
+      <div><img src="photos/14L.jpg" alt="" loading="lazy"></div>
+      <div><img src="photos/14R.jpg" alt="" loading="lazy"></div>
+    </div>
+    <div class="spread"><img src="photos/15.jpg" alt="" loading="lazy"></div>
+  </div>
+
+  <!-- 11. Related Products: 다른 호 3개 -->
+  <section class="related">
+    <p class="k">Related</p>
+    <div class="rel">
+      <a href="#"><div class="thumb"><img src="photos/no2.jpg" alt=""></div><div class="t">BOSTON</div><div class="s">ISSUE NO.2 · 2026. 12.</div></a>
+      <a href="survey.html"><div class="thumb"><div class="ph">설문</div></div><div class="t">Reader Survey</div><div class="s">축하 한마디 · 사진 한 장</div></a>
+      <a href="#"><div class="thumb"><div class="ph">2호에 실림</div></div><div class="t">Letters</div><div class="s">독자 편지</div></a>
+    </div>
+  </section>
+
+</main>
+
+<!-- 12. 푸터 -->
+<footer>
+  <div class="wrap">
+    <div class="logo">D</div>
+    발행인 도아라 · 조동인<br>
+    사진 고야시그니처 (스튜디오) · ○○○ (가족식) · 양가 앨범<br>
+    창간 2026. 10. · 대구<br>
+    © D. 이 잡지는 광고가 없고, 과월호 개념이 없습니다.
+  </div>
+</footer>
+
+</body>
+</html>

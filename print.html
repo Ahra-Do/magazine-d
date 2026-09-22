@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Magazine D — ISSUE NO.1 — Print proof (170 × 240 mm, 44p)</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  /* ===== 인쇄 교정용. 170x240mm 낱장, 재단 여유 없음(교정용). 최종은 Publisher/InDesign에서 3mm bleed 추가 ===== */
+  @page { size: 170mm 240mm; margin: 0; }
+  :root{ --ink:#111; --sub:#777; --line:#e6e6e6; --font:"Inter","Noto Sans KR",system-ui,sans-serif; }
+  *{box-sizing:border-box}
+  html,body{margin:0;background:#bbb;font-family:var(--font);font-weight:300;color:var(--ink);-webkit-print-color-adjust:exact;print-color-adjust:exact}
+
+  .toolbar{position:sticky;top:0;background:#222;color:#eee;font-size:12px;padding:10px 16px;z-index:9;display:flex;gap:18px;align-items:center}
+  .toolbar a{color:#fff}
+  .sheet{display:flex;flex-wrap:wrap;gap:12px;padding:16px;justify-content:center}
+  .pair{display:flex;gap:0;box-shadow:0 2px 14px rgba(0,0,0,.25)}
+
+  .page{width:170mm;height:240mm;background:#fff;position:relative;overflow:hidden;page-break-after:always;break-after:page;flex:none}
+  .page.L{border-right:1px dashed rgba(0,0,0,.12)}
+  .folio{position:absolute;bottom:9mm;font-size:7pt;color:var(--sub);letter-spacing:.04em}
+  .L .folio{left:12mm}.R .folio{right:12mm}
+  .section-tag{position:absolute;top:9mm;font-size:6.5pt;color:var(--sub);letter-spacing:.08em}
+  .L .section-tag{left:12mm}.R .section-tag{right:12mm}
+
+  /* 펼침 사진: 17:12 이미지를 좌/우 페이지에 반씩 */
+  .photo-L,.photo-R{background-size:200% 100%;background-repeat:no-repeat}
+  .photo-L{background-position:0 0}
+  .photo-R{background-position:100% 0}
+  /* 단면 사진(17:24) */
+  .photo-1{background-size:cover;background-position:center}
+
+  /* 텍스트 페이지 */
+  .text{padding:22mm 16mm 20mm}
+  .text .k{font-size:8pt;margin:0 0 1mm;font-weight:400}
+  .text h1{font-size:26pt;font-weight:400;line-height:1.05;margin:8mm 0 0;letter-spacing:-.01em}
+  .text .sub{font-size:8.5pt;color:var(--sub);margin-top:4mm}
+  .text p.body{font-size:9.5pt;line-height:1.95;margin:0;word-break:keep-all}
+  table.spec{width:100%;border-collapse:collapse;font-size:8pt;margin-top:2mm}
+  table.spec td{padding:2.6mm 0;border-top:1px solid var(--line);vertical-align:top}
+  table.spec tr:last-child td{border-bottom:1px solid var(--line)}
+  table.spec td:first-child{width:38%;color:var(--sub)}
+
+  .quote{display:flex;align-items:center;justify-content:center;text-align:center;padding:0 20mm}
+  .quote p{font-size:10pt;line-height:2;margin:0;word-break:keep-all}
+  .quote .by{display:block;margin-top:8mm;font-size:7.5pt;color:var(--sub)}
+
+  .opener{display:flex;flex-direction:column;justify-content:flex-end;padding:0 16mm 24mm}
+  .opener .n{font-size:8pt;color:var(--sub);margin-bottom:2mm}
+  .opener h2{font-size:20pt;font-weight:400;margin:0;line-height:1.1}
+
+  .cover{padding:18mm 16mm}
+  .cover .big{font-size:120pt;font-weight:500;line-height:.9;letter-spacing:-.04em;margin:0}
+  .cover .meta{position:absolute;left:16mm;bottom:18mm;font-size:9pt;line-height:1.7}
+  .cover .meta b{font-weight:500}
+  .back{display:flex;flex-direction:column;justify-content:flex-end;padding:0 16mm 18mm;font-size:8pt;line-height:1.8;color:var(--sub)}
+  .back .qr{width:22mm;height:22mm;border:1px solid var(--line);display:flex;align-items:center;justify-content:center;font-size:6pt;color:#aaa;margin-bottom:4mm}
+
+  .colophon{padding:22mm 16mm;font-size:8pt;line-height:1.9;color:var(--sub)}
+  .colophon .k{color:var(--ink);font-weight:400;margin-bottom:6mm}
+  .colophon .next{margin-top:14mm;color:var(--ink)}
+
+  @media print{
+    .toolbar{display:none}
+    body{background:#fff}
+    .sheet{display:block;padding:0}
+    .pair{display:contents;box-shadow:none}
+    .page.L{border:0}
+  }
+</style>
+</head>
+<body>
+<div class="toolbar">
+  <span>Print proof · 170 × 240 mm · 표지 4면 + 내지 44쪽</span>
+  <a href="index.html">← 웹 버전</a>
+  <span>브라우저 인쇄 → PDF 저장 (여백 없음, 배경 그래픽 켜기)</span>
+</div>
+
+<div class="sheet">
+
+<!-- 표1 / 표2 -->
+<div class="pair">
+  <div class="page R cover"><p class="big">D</p><div class="meta"><b>Magazine D</b><br>ISSUE NO.1<br>DO AH RA &amp; JO DONG IN<br>2026. 10.</div></div>
+</div>
+<div class="pair">
+  <div class="page L"></div>
+  <!-- p1 속표지 -->
+  <div class="page R text"><p class="k">Magazine D</p><p class="k">ISSUE NO.1</p><h1>DO AH RA &amp;<br>JO DONG IN</h1><p class="sub">도아라 &amp; 조동인</p><span class="folio">1</span></div>
+</div>
+
+<!-- p2 스펙 / p3 Description -->
+<div class="pair">
+  <div class="page L text"><p class="k">Specifications</p>
+    <table class="spec">
+      <tr><td>language</td><td>KOREAN</td></tr>
+      <tr><td>size</td><td>170 × 240 mm</td></tr>
+      <tr><td>pages</td><td>44</td></tr>
+      <tr><td>date</td><td>2026. 10. 00.</td></tr>
+      <tr><td>edition</td><td>00 copies · web edition at (URL)</td></tr>
+    </table><span class="folio">2</span></div>
+  <div class="page R text"><p class="k">Description</p>
+    <p class="body">도아라와 조동인은 1991년과 1989년, 각각 ○○과 대구에서 태어났습니다. 한 사람은 식품영양학에서 출발해 미생물과 데이터를 다루는 연구자가 되었고, 다른 한 사람은 대구에서 창업가들을 돕는 액셀러레이터를 이끌어왔습니다. 두 사람은 ○○년 ○○에서 처음 만났고, ○년의 시간을 지나 2026년 ○월 혼인신고를 마쳤습니다. 2026년 10월, 여덟 명의 가족 앞에서 결혼식을 올린 두 사람은 같은 해 12월 보스턴으로 떠납니다. 이 창간호는 그 출발점에 서 있는 두 사람을, 두 사람을 오래 지켜본 이들의 말과 사진으로 기록합니다.</p>
+    <span class="folio">3</span></div>
+</div>
+
+<!-- p4-5 히어로 -->
+<div class="pair">
+  <div class="page L photo-L" style="background-image:url(photos/hero.jpg)"></div>
+  <div class="page R photo-R" style="background-image:url(photos/hero.jpg)"></div>
+</div>
+
+<!-- p6-11 아라 -->
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/01.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/01.jpg)"></div></div>
+<div class="pair"><div class="page L photo-1" style="background-image:url(photos/02L.jpg)"></div><div class="page R photo-1" style="background-image:url(photos/02R.jpg)"></div></div>
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/03.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/03.jpg)"></div></div>
+
+<!-- p12 인용구1 / p13 오프너 -->
+<div class="pair">
+  <div class="page L quote"><div><p>어릴 때부터 뭐든 끝까지 파고드는 아이였어요. 한번 궁금한 게 생기면 밥 먹는 것도 잊고 앉아 있었죠. 그게 지금 하는 일로 이어질 줄은 몰랐지만, 돌아보면 그때 이미 다 정해져 있었던 것 같아요.</p><span class="by">김정화, 신부의 어머니</span></div><span class="folio">12</span></div>
+  <div class="page R opener"><div class="n">02</div><h2>Origin<br>조동인</h2><span class="folio">13</span></div>
+</div>
+
+<!-- p14-19 동인 -->
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/04.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/04.jpg)"></div></div>
+<div class="pair"><div class="page L photo-1" style="background-image:url(photos/05L.jpg)"></div><div class="page R photo-1" style="background-image:url(photos/05R.jpg)"></div></div>
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/06.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/06.jpg)"></div></div>
+
+<!-- p20 / p21 -->
+<div class="pair">
+  <div class="page L quote"><div><p>(신랑 부모님 말씀이 들어갈 자리입니다. 사진 3장을 보시면서 떠오르는 이야기를 그대로 받아 적습니다. 말투를 고치지 않는 것이 이 잡지의 원칙입니다.)</p><span class="by">○○○, 신랑의 아버지</span></div><span class="folio">20</span></div>
+  <div class="page R opener"><div class="n">03</div><h2>Encounter<br>두 사람</h2><span class="folio">21</span></div>
+</div>
+
+<!-- p22-27 만남 -->
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/07.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/07.jpg)"></div></div>
+<div class="pair"><div class="page L photo-1" style="background-image:url(photos/08L.jpg)"></div><div class="page R photo-1" style="background-image:url(photos/08R.jpg)"></div></div>
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/09.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/09.jpg)"></div></div>
+
+<!-- p28 / p29 -->
+<div class="pair">
+  <div class="page L quote"><div><p>(두 사람을 함께 아는 친구 한 명의 말. 두 사람이 서로에게 어떤 사람인지, 옆에서 본 사람만 아는 이야기.)</p><span class="by">○○○, 두 사람의 친구</span></div><span class="folio">28</span></div>
+  <div class="page R opener"><div class="n">04</div><h2>Studio</h2><span class="folio">29</span></div>
+</div>
+
+<!-- p30-35 스튜디오 -->
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/10.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/10.jpg)"></div></div>
+<div class="pair"><div class="page L photo-1" style="background-image:url(photos/11L.jpg)"></div><div class="page R photo-1" style="background-image:url(photos/11R.jpg)"></div></div>
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/12.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/12.jpg)"></div></div>
+
+<!-- p36 / p37 -->
+<div class="pair">
+  <div class="page L quote"><div><p>(두 사람의 말. B의 아웃트로처럼 나레이션 톤으로. 왜 여덟 명의 가족식이었는지, 왜 이 잡지를 만드는지. 2호에서 다시 읽었을 때 초심이 되어줄 문장.)</p><span class="by">도아라 · 조동인, 발행인</span></div><span class="folio">36</span></div>
+  <div class="page R opener"><div class="n">05</div><h2>The Day<br>2026. 10.</h2><span class="folio">37</span></div>
+</div>
+
+<!-- p38-43 가족식 -->
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/13.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/13.jpg)"></div></div>
+<div class="pair"><div class="page L photo-1" style="background-image:url(photos/14L.jpg)"></div><div class="page R photo-1" style="background-image:url(photos/14R.jpg)"></div></div>
+<div class="pair"><div class="page L photo-L" style="background-image:url(photos/15.jpg)"></div><div class="page R photo-R" style="background-image:url(photos/15.jpg)"></div></div>
+
+<!-- p44 판권 / 표3 -->
+<div class="pair">
+  <div class="page L colophon"><div class="k">Colophon</div>
+    발행인 도아라 · 조동인<br>사진 고야시그니처 (스튜디오) · ○○○ (가족식) · 양가 앨범<br>서체 Inter · Noto Sans KR<br>종이 표지 랑데뷰 240g · 내지 몽블랑 130g<br>인쇄 ○○○ · 2026. 10. · 대구<br>© D. 이 잡지는 광고가 없고, 과월호 개념이 없습니다.
+    <div class="next"><b>Next</b><br>ISSUE NO.2 — BOSTON<br>2026. 12.</div>
+    <span class="folio">44</span></div>
+  <div class="page R"></div>
+</div>
+
+<!-- 표4 -->
+<div class="pair">
+  <div class="page L back"><div class="qr">QR</div>Reader Survey · 축하 한마디, 사진 한 장<br>웹 에디션 (URL)<br><br>Magazine D · ISSUE NO.1</div>
+</div>
+
+</div>
+</body>
+</html>

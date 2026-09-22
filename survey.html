@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Reader Survey — Magazine D</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{--ink:#111;--sub:#777;--line:#e6e6e6}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:"Inter","Noto Sans KR",system-ui,sans-serif;font-weight:300;color:var(--ink)}
+  .wrap{max-width:640px;margin:0 auto;padding:0 20px}
+  nav{display:flex;justify-content:space-between;align-items:center;height:52px;font-size:12px;border-bottom:1px solid var(--line)}
+  nav a{margin-right:16px}
+  .logo{font-weight:500;letter-spacing:.08em}
+  header{padding:36px 0 10px}
+  header .k{font-size:12px;margin:0 0 2px;font-weight:400}
+  h1{font-size:30px;font-weight:400;margin:14px 0 0}
+  p.lead{font-size:14px;line-height:1.9;margin:26px 0 0;word-break:keep-all}
+  .notice{margin:28px 0 0;padding:18px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line);font-size:14px;line-height:1.9}
+  .form{margin:30px 0 60px;aspect-ratio:3/4;background:#ececec;display:flex;align-items:center;justify-content:center;color:#9a9a9a;font-size:12px;text-align:center;padding:20px}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <nav><div><a class="logo" href="index.html">D</a><a href="index.html">Issues</a><a href="#">Survey</a></div><div><a href="#">KR</a><a href="#">EN</a></div></nav>
+  <header>
+    <p class="k">Magazine D</p>
+    <p class="k">ISSUE NO.1</p>
+    <h1>Reader Survey</h1>
+  </header>
+
+  <p class="lead">
+    저희 두 사람, 2026년 10월 ○일 대구에서 여덟 명의 가족과 함께 결혼식을 올렸습니다.
+    직접 모시지 못한 분들께는 이 잡지로 소식을 대신합니다. 아래 설문에 남겨주신 답은 12월에 나올 2호 "Letters" 코너에 실립니다.
+  </p>
+
+  <div class="notice">
+    1. 축하 한마디<br>
+    2. 두 사람 중 누가 먼저 ○○할까? (예측 3문항)<br>
+    3. 당신 폰에 있는 우리 사진 한 장<br>
+    4. 2호에서 보고 싶은 것
+  </div>
+
+  <!-- Tally / Google Form 임베드 자리 -->
+  <div class="form">여기에 Tally 또는 Google Form iframe 임베드<br>(질문 4개, 사진 업로드 1개)</div>
+</div>
+</body>
+</html>
